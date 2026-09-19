@@ -1,0 +1,42 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Logs
+*.log
+
+# Frontend env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Backend env
+backend/.env
+backend/venv/
+backend/.venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,17 @@
+.adminShell {
+  min-height: 100vh;
+  background: #f8f4f3;
+}
+
+.content {
+  min-height: 100vh;
+  margin-left: 255px;
+}
+
+@media (
+  max-width: 850px
+) {
+  .content {
+    margin-left: 80px;
+  }
+}

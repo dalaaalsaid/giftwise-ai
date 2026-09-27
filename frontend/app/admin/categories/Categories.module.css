@@ -1,0 +1,310 @@
+.page {
+  padding: 35px 38px 80px;
+  color: #2c2023;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.heading > div > span {
+  color: #a85564;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heading h1 {
+  margin: 5px 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 43px;
+}
+
+.heading p {
+  margin: 0;
+  color: #847579;
+  font-size: 10px;
+}
+
+.primaryButton {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  background: #49383e;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.success,
+.error {
+  margin-bottom: 17px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 9px;
+}
+
+.success {
+  color: #597052;
+  background: #eaf1e7;
+}
+
+.error {
+  color: #8e4050;
+  background: #fff0f2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  padding: 21px;
+  border: 1px solid #e7ddda;
+  border-radius: 20px;
+  background: white;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  color: #a85564;
+  background: #f5e4e5;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.cardTop > div > span {
+  color: #a85564;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cardTop h2 {
+  margin: 4px 0 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 20px;
+}
+
+.active,
+.inactive {
+  height: fit-content;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.active {
+  color: #597052;
+  background: #eaf1e7;
+}
+
+.inactive {
+  color: #776a6e;
+  background: #eee9e8;
+}
+
+.slug {
+  margin-top: 17px;
+  padding: 11px;
+  border-radius: 11px;
+  background: #faf6f5;
+}
+
+.slug span {
+  display: block;
+  margin-bottom: 4px;
+  color: #95878b;
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+.slug code {
+  color: #65464f;
+  font-size: 9px;
+}
+
+.actions {
+  display: flex;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.actions button {
+  min-height: 33px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  border: 1px solid #dfd4d1;
+  border-radius: 9px;
+  background: white;
+  cursor: pointer;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.actions .danger {
+  color: #9a4958;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  background: rgba(35, 25, 29, 0.55);
+}
+
+.modal {
+  width: min(500px, 100%);
+  padding: 24px;
+  border-radius: 22px;
+  background: white;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 17px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #eee6e4;
+}
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.modalTitle svg {
+  color: #a85564;
+}
+
+.modalTitle span {
+  color: #a85564;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.modalTitle h2 {
+  margin: 3px 0 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+.modalHeader > button {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e1d6d3;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.modal > label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 13px;
+  color: #65565b;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.modal input[type="text"],
+.modal label > input:not(
+  [type="checkbox"]
+) {
+  min-height: 43px;
+  padding: 0 11px;
+  border: 1px solid #dfd4d1;
+  border-radius: 10px;
+  outline: none;
+  font: inherit;
+}
+
+.modal .toggle {
+  flex-direction: row;
+  align-items: center;
+}
+
+.toggle input {
+  accent-color: #a85564;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 23px;
+  padding-top: 17px;
+  border-top: 1px solid #eee6e4;
+}
+
+.modalActions button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #dfd4d1;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.modalActions .saveButton {
+  border-color: #49383e;
+  color: white;
+  background: #49383e;
+}
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,904 @@
+.hero {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: -84px;
+  padding:
+    175px 0
+    85px;
+  color: #302327;
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(183, 112, 127, 0.16),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(232, 206, 210, 0.58),
+      transparent 30%
+    ),
+    linear-gradient(
+      115deg,
+      #fffdfb 0%,
+      #fff8f6 48%,
+      #f6e9ea 100%
+    );
+}
+
+.glowOne,
+.glowTwo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.glowOne {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: 30px;
+  background:
+    rgba(168, 85, 100, 0.08);
+  animation:
+    glowMoveOne
+    9s ease-in-out
+    infinite;
+}
+
+.glowTwo {
+  width: 300px;
+  height: 300px;
+  left: 28%;
+  bottom: -170px;
+  background:
+    rgba(157, 171, 145, 0.1);
+  animation:
+    glowMoveTwo
+    11s ease-in-out
+    infinite;
+}
+
+.heroGrid {
+  position: relative;
+  z-index: 2;
+  width: min(
+    1240px,
+    calc(100% - 40px)
+  );
+  display: grid;
+  grid-template-columns:
+    1.02fr
+    0.98fr;
+  align-items: center;
+  gap: 60px;
+  margin-inline: auto;
+}
+
+.content {
+  max-width: 670px;
+  animation:
+    contentReveal
+    0.8s ease both;
+}
+
+.eyebrow {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  margin-bottom: 24px;
+  border: 1px solid
+    rgba(168, 85, 100, 0.13);
+  border-radius: 999px;
+  color: #79444f;
+  background:
+    rgba(255, 255, 255, 0.66);
+  box-shadow:
+    0 8px 30px
+    rgba(90, 57, 65, 0.05);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a85564;
+  box-shadow:
+    0 0 0 5px
+    rgba(168, 85, 100, 0.1);
+}
+
+.title {
+  max-width: 720px;
+  margin: 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size:
+    clamp(
+      57px,
+      6.9vw,
+      94px
+    );
+  line-height: 0.91;
+  letter-spacing: -4.3px;
+}
+
+.title span {
+  display: block;
+  margin-top: 5px;
+  color: #a85564;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.description {
+  max-width: 600px;
+  margin:
+    29px
+    0
+    0;
+  color: #76686c;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 31px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 51px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 19px;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 850;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.primaryButton {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      #53373f,
+      #8a4d5c
+    );
+  box-shadow:
+    0 12px 30px
+    rgba(102, 58, 70, 0.17);
+}
+
+.primaryButton::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 150%;
+  left: -90px;
+  top: -25%;
+  background:
+    rgba(255, 255, 255, 0.2);
+  transform: rotate(20deg);
+  transition: left 0.6s ease;
+}
+
+.primaryButton:hover::before {
+  left: 120%;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform:
+    translateY(-3px);
+}
+
+.secondaryButton {
+  border: 1px solid #ddcecb;
+  color: #4e3f44;
+  background:
+    rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.metrics {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 39px;
+}
+
+.metric {
+  position: relative;
+  padding-right: 22px;
+}
+
+.metric:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 1px;
+  height: 30px;
+  background: #ded0ce;
+}
+
+.metric strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #45373b;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 13px;
+}
+
+.metric span {
+  color: #938589;
+  font-size: 8px;
+}
+
+.visual {
+  position: relative;
+  min-height: 545px;
+  display: grid;
+  place-items: center;
+}
+
+.orbit {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border: 1px solid
+    rgba(123, 75, 86, 0.1);
+  border-radius: 50%;
+  animation:
+    orbitSpin
+    40s linear
+    infinite;
+}
+
+.orbit::before {
+  content: "";
+  position: absolute;
+  left: 46px;
+  top: 52px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #a85564;
+  box-shadow:
+    0 0 0 8px
+    rgba(168, 85, 100, 0.08);
+}
+
+.giftCard {
+  position: relative;
+  width: min(
+    420px,
+    88%
+  );
+  height: 455px;
+  overflow: hidden;
+  border: 1px solid
+    rgba(122, 82, 91, 0.12);
+  border-radius: 43px;
+  background:
+    linear-gradient(
+      155deg,
+      rgba(
+        255,
+        255,
+        255,
+        0.85
+      ),
+      rgba(
+        250,
+        231,
+        232,
+        0.88
+      )
+    );
+  box-shadow:
+    0 35px 85px
+    rgba(85, 48, 57, 0.12);
+  backdrop-filter: blur(15px);
+  animation:
+    cardFloat
+    5s ease-in-out
+    infinite;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px;
+}
+
+.aiPick {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  color: #7e4350;
+  background:
+    rgba(255, 255, 255, 0.72);
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.match {
+  color: #708267;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.giftScene {
+  position: relative;
+  height: 280px;
+  display: grid;
+  place-items: center;
+}
+
+.giftBox {
+  position: relative;
+  width: 145px;
+  height: 123px;
+  margin-top: 60px;
+  border-radius:
+    6px 6px 21px 21px;
+  background:
+    linear-gradient(
+      145deg,
+      #a55869,
+      #c77988
+    );
+  box-shadow:
+    0 18px 35px
+    rgba(117, 61, 74, 0.18);
+  animation:
+    boxFloat
+    3.8s ease-in-out
+    infinite;
+}
+
+.lid {
+  position: absolute;
+  width: 165px;
+  height: 34px;
+  top: -28px;
+  left: -10px;
+  border-radius:
+    11px 11px 7px 7px;
+  background:
+    linear-gradient(
+      145deg,
+      #b86b7a,
+      #d6919d
+    );
+  animation:
+    lidBounce
+    3.8s ease-in-out
+    infinite;
+}
+
+.verticalRibbon {
+  position: absolute;
+  top: -28px;
+  left: 61px;
+  width: 24px;
+  height: 151px;
+  background:
+    rgba(255, 231, 224, 0.78);
+}
+
+.horizontalRibbon {
+  position: absolute;
+  left: 0;
+  top: 42px;
+  width: 145px;
+  height: 20px;
+  background:
+    rgba(255, 231, 224, 0.78);
+}
+
+.bowLeft,
+.bowRight {
+  position: absolute;
+  top: -61px;
+  width: 49px;
+  height: 35px;
+  border: 11px solid
+    #d9949f;
+  background: transparent;
+}
+
+.bowLeft {
+  left: 28px;
+  border-radius:
+    50% 50%
+    15% 50%;
+  transform: rotate(18deg);
+}
+
+.bowRight {
+  right: 28px;
+  border-radius:
+    50% 50%
+    50% 15%;
+  transform: rotate(-18deg);
+}
+
+.cardCopy {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 24px;
+  padding-top: 16px;
+  border-top: 1px solid
+    rgba(98, 58, 67, 0.09);
+}
+
+.cardCopy span {
+  display: block;
+  color: #9b6a75;
+  font-size: 7px;
+  font-weight: 850;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.cardCopy strong {
+  display: block;
+  margin-top: 5px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 20px;
+}
+
+.floatingChip {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding:
+    11px 14px;
+  border: 1px solid
+    rgba(122, 82, 91, 0.11);
+  border-radius: 15px;
+  color: #5e4c51;
+  background:
+    rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 14px 35px
+    rgba(78, 46, 54, 0.08);
+  backdrop-filter: blur(13px);
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.chipOne {
+  left: -12px;
+  top: 125px;
+  animation:
+    chipFloatOne
+    4s ease-in-out
+    infinite;
+}
+
+.chipTwo {
+  right: -6px;
+  top: 200px;
+  animation:
+    chipFloatTwo
+    4.5s ease-in-out
+    infinite;
+}
+
+.chipThree {
+  left: 33px;
+  bottom: 50px;
+  animation:
+    chipFloatOne
+    5s ease-in-out
+    infinite;
+}
+
+.aiCard {
+  position: absolute;
+  z-index: 5;
+  right: -25px;
+  bottom: 22px;
+  width: 210px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px;
+  border: 1px solid
+    rgba(125, 74, 86, 0.1);
+  border-radius: 18px;
+  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(67, 47, 54, 0.95),
+      rgba(91, 60, 69, 0.95)
+    );
+  box-shadow:
+    0 18px 50px
+    rgba(63, 43, 49, 0.18);
+  backdrop-filter: blur(15px);
+  animation:
+    aiCardFloat
+    4.3s ease-in-out
+    infinite;
+}
+
+.aiIcon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  color: #6d3e49;
+  background: #f5dce1;
+}
+
+.aiCard div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.aiCard span {
+  color: #cbb9bd;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.aiCard strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 12px;
+}
+
+.sparkleOne,
+.sparkleTwo,
+.heartOne,
+.heartTwo {
+  position: absolute;
+  pointer-events: none;
+}
+
+.sparkleOne {
+  top: 72px;
+  right: 72px;
+  color: #b56d7c;
+  animation:
+    sparkleFloat
+    3s ease-in-out
+    infinite;
+}
+
+.sparkleTwo {
+  left: 79px;
+  top: 205px;
+  color: #c7969f;
+  animation:
+    sparkleFloat
+    4s ease-in-out
+    infinite reverse;
+}
+
+.heartOne {
+  right: 80px;
+  top: 158px;
+  color: #b65e70;
+  font-size: 17px;
+  animation:
+    heartFloat
+    4.5s ease-in-out
+    infinite;
+}
+
+.heartTwo {
+  left: 88px;
+  bottom: 160px;
+  color: #cc8995;
+  font-size: 11px;
+  animation:
+    heartFloat
+    5.5s ease-in-out
+    infinite reverse;
+}
+
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-1deg);
+  }
+
+  50% {
+    transform:
+      translateY(-9px)
+      rotate(1deg);
+  }
+}
+
+@keyframes boxFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+}
+
+@keyframes lidBounce {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0);
+  }
+
+  50% {
+    transform:
+      translateY(-9px)
+      rotate(-2deg);
+  }
+}
+
+@keyframes chipFloatOne {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-7px);
+  }
+}
+
+@keyframes chipFloatTwo {
+  0%,
+  100% {
+    transform:
+      translateY(-2px);
+  }
+
+  50% {
+    transform:
+      translateY(7px);
+  }
+}
+
+@keyframes aiCardFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-9px);
+  }
+}
+
+@keyframes sparkleFloat {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform:
+      scale(0.9)
+      rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform:
+      scale(1.15)
+      rotate(15deg);
+  }
+}
+
+@keyframes heartFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-5deg);
+  }
+
+  50% {
+    transform:
+      translateY(-11px)
+      rotate(5deg);
+  }
+}
+
+@keyframes orbitSpin {
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+@keyframes glowMoveOne {
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(-35px, 25px);
+  }
+}
+
+@keyframes glowMoveTwo {
+  0%,
+  100% {
+    transform:
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      translate(25px, -20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .giftCard,
+  .giftBox,
+  .lid,
+  .floatingChip,
+  .aiCard,
+  .sparkleOne,
+  .sparkleTwo,
+  .heartOne,
+  .heartTwo,
+  .orbit,
+  .glowOne,
+  .glowTwo {
+    animation: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    margin-top: -80px;
+    padding-top: 155px;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    max-width: 790px;
+  }
+
+  .visual {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: auto;
+    margin-top: -72px;
+    padding:
+      145px 0
+      60px;
+  }
+
+  .heroGrid {
+    width: min(
+      100% - 28px,
+      1240px
+    );
+    gap: 35px;
+  }
+
+  .title {
+    font-size: 52px;
+    letter-spacing: -2.5px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .metrics {
+    gap: 13px;
+  }
+
+  .metric {
+    padding-right: 13px;
+  }
+
+  .visual {
+    min-height: 430px;
+  }
+
+  .giftCard {
+    height: 390px;
+  }
+
+  .orbit {
+    width: 340px;
+    height: 340px;
+  }
+
+  .floatingChip {
+    display: none;
+  }
+
+  .aiCard {
+    right: 0;
+    bottom: 8px;
+  }
+}

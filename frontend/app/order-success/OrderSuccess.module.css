@@ -1,0 +1,299 @@
+.page {
+  min-height: 100vh;
+  padding: 65px 0 100px;
+  color: #2c2023;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(168, 85, 100, 0.1),
+      transparent 28%
+    ),
+    #fffaf8;
+}
+
+.container {
+  width: min(
+    960px,
+    calc(100% - 40px)
+  );
+  margin-inline: auto;
+}
+
+.successHero {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.successIcon {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  color: white;
+  background: #65785f;
+  box-shadow:
+    0 14px 35px
+    rgba(101, 120, 95, 0.18);
+}
+
+.eyebrow {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #813d4b;
+  background: #f5e4e5;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.successHero h1 {
+  margin: 17px 0 13px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: clamp(
+    44px,
+    6vw,
+    67px
+  );
+  line-height: 1;
+  letter-spacing: -2.4px;
+}
+
+.successHero p {
+  margin: 0 auto;
+  color: #786a6e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.orderNumber {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 25px auto 0;
+  padding: 12px 17px;
+  border: 1px solid #eadfdc;
+  border-radius: 15px;
+  background: white;
+}
+
+.orderNumber span {
+  color: #93868a;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.orderNumber strong {
+  color: #813d4b;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 16px;
+}
+
+.detailCard {
+  min-height: 215px;
+  padding: 23px;
+  border: 1px solid #eadfdc;
+  border-radius: 23px;
+  background: white;
+}
+
+.cardIcon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border-radius: 13px;
+  color: #a85564;
+  background: #f5e4e5;
+}
+
+.detailCard > span {
+  color: #95868a;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bigValue {
+  display: block;
+  margin-top: 5px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 27px;
+}
+
+.status {
+  display: block;
+  margin-top: 7px;
+  color: #65785f;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 21px;
+  text-transform: capitalize;
+}
+
+.detailCard > p {
+  margin: 10px 0 0;
+  color: #786a6e;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.priceRows {
+  margin-top: 17px;
+  padding-top: 13px;
+  border-top: 1px solid #eee3e0;
+}
+
+.priceRows > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+  color: #786a6e;
+  font-size: 8px;
+}
+
+.priceRows strong {
+  color: #2c2023;
+}
+
+.deliveryCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 27px 30px;
+  border-radius: 24px;
+  color: white;
+  background: #49383e;
+}
+
+.deliveryCard span {
+  color: #dabfc5;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.deliveryCard h2 {
+  margin: 6px 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 22px;
+}
+
+.deliveryCard p {
+  margin: 4px 0;
+  color: #d0c2c5;
+  font-size: 9px;
+}
+
+.deliveryCard > svg {
+  color: #e4bdc5;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primaryButton {
+  color: white;
+  background: #a85564;
+}
+
+.secondaryButton {
+  color: #813d4b;
+  background: #f5e4e5;
+}
+
+.missing {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eadfdc;
+  border-radius: 30px;
+  background: white;
+  text-align: center;
+}
+
+.missing > svg {
+  color: #a85564;
+}
+
+.missing h1 {
+  margin: 18px 0 22px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 30px;
+}
+
+.missing a {
+  padding: 11px 17px;
+  border-radius: 999px;
+  color: white;
+  background: #a85564;
+  font-size: 9px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 750px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

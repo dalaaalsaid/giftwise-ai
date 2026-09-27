@@ -1,0 +1,188 @@
+.page {
+  padding: 35px 38px 80px;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.heading > div:first-child > span {
+  color: #a85564;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heading h1 {
+  margin: 5px 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 43px;
+}
+
+.heading p {
+  margin: 0;
+  color: #847579;
+  font-size: 10px;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 17px;
+  border: 1px solid #eadfdc;
+  border-radius: 16px;
+  background: white;
+}
+
+.summary svg {
+  color: #a85564;
+}
+
+.summary div {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary strong {
+  font-size: 16px;
+}
+
+.summary span {
+  color: #8b7d81;
+  font-size: 7px;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns:
+    minmax(250px, 1fr)
+    180px;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.searchBox {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 14px;
+  border: 1px solid #e0d5d2;
+  border-radius: 14px;
+  background: white;
+}
+
+.searchBox input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+}
+
+.toolbar select {
+  padding: 0 12px;
+  border: 1px solid #e0d5d2;
+  border-radius: 14px;
+  outline: none;
+  background: white;
+  font-size: 9px;
+}
+
+.tableCard {
+  overflow-x: auto;
+  border: 1px solid #e7ddda;
+  border-radius: 20px;
+  background: white;
+}
+
+.tableCard table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.tableCard th {
+  padding: 14px 15px;
+  color: #8c7d81;
+  background: #fcf8f7;
+  text-align: left;
+  font-size: 7px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tableCard td {
+  padding: 16px 15px;
+  border-top: 1px solid #eee6e4;
+  font-size: 9px;
+}
+
+.orderNumber {
+  color: #813d4b;
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.customer span {
+  color: #95888b;
+  font-size: 7px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #786a6e;
+}
+
+.badge,
+.statusBadge {
+  display: inline-flex;
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.badge {
+  color: #72535b;
+  background: #f5e4e5;
+}
+
+.statusBadge {
+  color: #597052;
+  background: #eaf1e7;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #813d4b;
+  font-size: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.empty {
+  padding: 45px;
+  color: #8b7d81;
+  text-align: center;
+  font-size: 10px;
+}

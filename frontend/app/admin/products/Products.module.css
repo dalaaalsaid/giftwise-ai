@@ -1,0 +1,454 @@
+.page {
+  padding: 35px 38px 80px;
+  color: #2c2023;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.heading > div > span {
+  color: #a85564;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heading h1 {
+  margin: 5px 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 43px;
+}
+
+.heading p {
+  margin: 0;
+  color: #847579;
+  font-size: 10px;
+}
+
+.primaryButton {
+  min-height: 43px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  background: #49383e;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.summaryGrid article {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  border: 1px solid #e7ddda;
+  border-radius: 18px;
+  background: white;
+}
+
+.summaryGrid svg {
+  color: #a85564;
+}
+
+.summaryGrid div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.summaryGrid span {
+  color: #8c7d81;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summaryGrid strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 20px;
+}
+
+.success,
+.error {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 9px;
+}
+
+.success {
+  color: #597052;
+  background: #eaf1e7;
+}
+
+.error {
+  color: #8e4050;
+  background: #fff0f2;
+}
+
+.toolbar {
+  margin-bottom: 16px;
+}
+
+.searchBox {
+  width: min(430px, 100%);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid #e0d5d2;
+  border-radius: 13px;
+  background: white;
+}
+
+.searchBox input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 9px;
+}
+
+.tableCard {
+  overflow-x: auto;
+  border: 1px solid #e7ddda;
+  border-radius: 20px;
+  background: white;
+}
+
+.tableCard table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+}
+
+.tableCard th {
+  padding: 13px 14px;
+  color: #8c7d81;
+  background: #fcf8f7;
+  text-align: left;
+  font-size: 7px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tableCard td {
+  padding: 15px 14px;
+  border-top: 1px solid #eee6e4;
+  vertical-align: middle;
+  font-size: 9px;
+}
+
+.productInfo {
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.productIcon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #eadfdd;
+  border-radius: 12px;
+  color: #a85564;
+  background: #f5e4e5;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.25s ease;
+}
+
+tr:hover .productImage {
+  transform: scale(1.05);
+}
+
+.productInfo > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.productInfo span {
+  max-width: 280px;
+  overflow: hidden;
+  color: #8c7d81;
+  font-size: 7px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.stock,
+.lowStock,
+.activeBadge,
+.inactiveBadge {
+  display: inline-flex;
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.stock,
+.activeBadge {
+  color: #597052;
+  background: #eaf1e7;
+}
+
+.lowStock {
+  color: #8a5d46;
+  background: #fff2df;
+}
+
+.inactiveBadge {
+  color: #796a6e;
+  background: #eee9e8;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.categoryList span {
+  padding: 5px 7px;
+  border-radius: 999px;
+  color: #75515a;
+  background: #f6e8ea;
+  font-size: 7px;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 9px;
+  border: 1px solid #dfd4d1;
+  border-radius: 9px;
+  color: #5d4e53;
+  background: white;
+  cursor: pointer;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.actions .dangerButton {
+  color: #9a4958;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  background: rgba(35, 25, 29, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 23px;
+  background: white;
+  box-shadow:
+    0 30px 80px
+    rgba(30, 20, 24, 0.25);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 17px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #eee6e4;
+}
+
+.modalHeader span {
+  color: #a85564;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.modalHeader h2 {
+  margin: 4px 0 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 25px;
+}
+
+.modalHeader button {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e3d8d5;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+  gap: 13px;
+}
+
+.formGrid label,
+.fullField {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #64555a;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.formGrid input,
+.fullField textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 11px;
+  border: 1px solid #dfd4d1;
+  border-radius: 10px;
+  outline: none;
+  font: inherit;
+  font-size: 9px;
+}
+
+.fullField {
+  margin-top: 13px;
+}
+
+.fullField textarea {
+  min-height: 95px;
+  padding: 11px;
+  resize: vertical;
+}
+
+.categoriesField {
+  margin-top: 18px;
+}
+
+.categoriesField > strong {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 9px;
+}
+
+.categoriesField > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.categoriesField label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border: 1px solid #e0d5d2;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 8px;
+}
+
+.categoriesField input,
+.activeToggle input {
+  accent-color: #a85564;
+}
+
+.activeToggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 25px;
+  padding-top: 17px;
+  border-top: 1px solid #eee6e4;
+}
+
+.modalActions button {
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid #dfd4d1;
+  border-radius: 11px;
+  background: white;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.modalActions .saveButton {
+  border-color: #49383e;
+  color: white;
+  background: #49383e;
+}
+
+@media (max-width: 800px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,284 @@
+.page {
+  padding: 35px 38px 80px;
+}
+
+.loading {
+  padding: 50px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.topbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #75666b;
+  font-size: 9px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.topbar button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  background: #49383e;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.heading span {
+  color: #a85564;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.heading h1 {
+  margin: 4px 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 39px;
+}
+
+.heading p {
+  margin: 0;
+  color: #8c7e82;
+  font-size: 8px;
+}
+
+.statuses {
+  display: flex;
+  gap: 7px;
+}
+
+.statuses span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: #69464f;
+  background: #f3e1e4;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  color: #597052;
+  background: #eaf1e7;
+  font-size: 9px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    320px;
+  gap: 20px;
+  align-items: start;
+}
+
+.card,
+.sideCard {
+  padding: 23px;
+  border: 1px solid #e7ddda;
+  border-radius: 20px;
+  background: white;
+}
+
+.card + .card {
+  margin-top: 18px;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 17px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #eee6e4;
+}
+
+.cardTitle svg {
+  color: #a85564;
+}
+
+.cardTitle span {
+  color: #a85564;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cardTitle h2 {
+  margin: 3px 0 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 18px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+  gap: 13px;
+}
+
+.card label,
+.sideCard label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #62545a;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.card input,
+.card textarea,
+.sideCard select {
+  width: 100%;
+  min-height: 43px;
+  padding: 0 12px;
+  border: 1px solid #dfd4d1;
+  border-radius: 11px;
+  outline: none;
+  background: #fffdfc;
+  font: inherit;
+  font-size: 9px;
+}
+
+.card input:disabled,
+.card textarea:disabled,
+.sideCard select:disabled {
+  color: #706267;
+  background: #f8f4f3;
+}
+
+.notes {
+  margin-top: 14px;
+}
+
+.card textarea {
+  min-height: 90px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.items > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee6e4;
+}
+
+.items > div:last-child {
+  border-bottom: 0;
+}
+
+.items > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.items span {
+  color: #95888b;
+  font-size: 7px;
+}
+
+.sideCard {
+  position: sticky;
+  top: 30px;
+}
+
+.sideCard h2 {
+  margin: 0 0 18px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+.priceRows {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eee6e4;
+}
+
+.priceRows > div,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 9px;
+}
+
+.total {
+  padding: 16px 0;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 18px;
+}
+
+.sideCard label {
+  margin-top: 14px;
+}
+
+.warning {
+  margin-top: 17px;
+  padding: 12px;
+  border-radius: 11px;
+  color: #8a5d46;
+  background: #fff2df;
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+@media (
+  max-width: 1000px
+) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sideCard {
+    position: static;
+  }
+}
+
+@media (
+  max-width: 650px
+) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
